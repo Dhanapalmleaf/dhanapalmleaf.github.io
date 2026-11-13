@@ -173,7 +173,7 @@
   }
   .float-book.is-hidden { opacity: 0; transform: translateY(12px); visibility: hidden; pointer-events: none; }
   @media (max-width: 600px) {
-    .float-book { left: max(16px, env(safe-area-inset-left, 0px)); }
+    .float-book { left: max(16px, env(safe-area-inset-left, 0px)); justify-self: stretch; }
     body { padding-bottom: 5.5rem; }
   }
   @media (prefers-reduced-motion: reduce) {
