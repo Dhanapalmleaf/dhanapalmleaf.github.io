@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dhana&#39;s palm leaf corner · Nadi palm leaf readings online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Dhanalakshmi from Thanjavur shares online Nadi palm leaf readings as a mypalmleaf partner.">
+<meta property="og:title" content="Dhana&#39;s palm leaf corner">
+<meta property="og:description" content="Dhanalakshmi from Thanjavur shares online Nadi palm leaf readings as a mypalmleaf partner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600&family=Marcellus&display=swap">
+<style>
+  html, body { margin: 0; }
+  /* Layout: one quiet reading column; the reading steps are drawn as a bundle of palm leaves with string holes. */
+  :root {
+    --bg: #F3F5EF;          /* pale Kaveri paddy */
+    --panel: #FFFFFF;
+    --ink: #26231F;         /* temple granite */
+    --muted: #5F5A50;
+    --rule: #D5D8CB;
+    --accent: #9E2230;      /* kumkum red */
+    --on-accent: #FFFFFF;
+    --gold: #A97A22;        /* Tanjore gold leaf */
+    --leaf: #EADFBF;        /* dried palm leaf */
+    --leaf-edge: #CDBB8A;
+    --leaf-line: rgba(120, 90, 30, .13);
+    --display: "Marcellus", "Cormorant Garamond", Georgia, serif;
+    --body: "Hind Madurai", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141612; --panel: #1C1F19; --ink: #ECE8DD; --muted: #ABA596; --rule: #2E322A;
+      --accent: #E46A6F; --on-accent: #1A0B0D; --gold: #D6AA55;
+      --leaf: #2F2A1D; --leaf-edge: #4B4229; --leaf-line: rgba(230, 200, 140, .07);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141612; --panel: #1C1F19; --ink: #ECE8DD; --muted: #ABA596; --rule: #2E322A;
+    --accent: #E46A6F; --on-accent: #1A0B0D; --gold: #D6AA55;
+    --leaf: #2F2A1D; --leaf-edge: #4B4229; --leaf-line: rgba(230, 200, 140, .07);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 720px;
+    margin-inline: auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; }
+  h2 { font-size: clamp(1.7rem, 4.5vw, 2.2rem); line-height: 1.2; }
+  p { margin: 0; }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+
+  /* Top bar */
+  .top { border-bottom: 1px solid var(--rule); }
+  .top-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; padding-block: 1rem; }
+  .wordmark { font-family: var(--display); font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+  .top-link { font-weight: 500; font-size: .95rem; text-decoration: none; }
+  .top-link:hover { text-decoration: underline; }
+
+  /* Sections */
+  section { padding-block: clamp(2.5rem, 7vw, 4rem); }
+  section + section { border-top: 1px solid var(--rule); }
+  .stack { display: grid; gap: 1.1rem; }
+  .sec-head { display: grid; gap: .25rem; margin-bottom: .4rem; }
+  .eyebrow { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+
+  /* Welcome */
+  .hero { padding-block: clamp(3rem, 9vw, 5.5rem) clamp(2.5rem, 7vw, 4rem); }
+  .greet { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; color: var(--muted); font-size: .95rem; }
+  .greet [lang="ta"] { font-size: 1.5rem; font-weight: 600; color: var(--accent); }
+  .hero h1 { font-size: clamp(2.2rem, 7vw, 3.5rem); line-height: 1.12; max-width: 16ch; }
+  .lede { font-size: 1.15rem; max-width: 36rem; }
+  .ornament { display: flex; align-items: center; gap: .6rem; color: var(--gold); width: 9rem; }
+  .ornament::before, .ornament::after { content: ""; flex: 1; height: 1px; background: currentColor; }
+  .ornament span { width: 7px; height: 7px; background: currentColor; transform: rotate(45deg); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    justify-self: start;
+    min-height: 3.1rem; padding: .7rem 1.6rem;
+    background: var(--accent); color: var(--on-accent);
+    font-weight: 600; font-size: 1.05rem; text-decoration: none;
+    border-radius: 999px;
+  }
+  .btn:hover { filter: brightness(1.08); }
+
+  /* About */
+  .about p { max-width: 38rem; }
+  .photo { margin: .4rem 0; display: grid; gap: .55rem; }
+  .photo img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; background: var(--leaf); }
+  .photo figcaption { font-size: .88rem; color: var(--muted); }
+
+  /* How a reading works: a bundle of leaves */
+  .bundle { list-style: none; margin: .6rem 0 0; padding: 0; display: grid; gap: .7rem; }
+  .leaf {
+    position: relative;
+    display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; align-items: start;
+    padding: 1.05rem 2.9rem 1.1rem 2.5rem;
+    background-color: var(--leaf);
+    background-image: repeating-linear-gradient(180deg, transparent 0 13px, var(--leaf-line) 13px 14px);
+    border: 1px solid var(--leaf-edge);
+    border-radius: 28px;
+  }
+  .leaf:nth-child(odd) { transform: rotate(-.35deg); }
+  .leaf:nth-child(even) { transform: rotate(.3deg); }
+  .leaf::before, .leaf::after {
+    content: ""; position: absolute; top: 50%;
+    width: 10px; height: 10px; margin-top: -5px; border-radius: 50%;
+    background: var(--bg); box-shadow: inset 0 0 0 1px var(--leaf-edge);
+  }
+  .leaf::before { left: 13px; }
+  .leaf::after { right: 13px; }
+  .n { display: flex; flex-direction: column; align-items: center; line-height: 1; color: var(--accent); }
+  .n b { font-family: var(--display); font-weight: 400; font-size: 1.9rem; }
+  .n small { margin-top: .3rem; font-size: .85rem; color: var(--muted); }
+  .leaf h3 { margin: 0 0 .15rem; font-size: 1.08rem; font-weight: 600; }
+  .leaf p { color: var(--ink); }
+
+  /* Questions */
+  .faq { margin: .4rem 0 0; display: grid; gap: 1.4rem; }
+  .faq div { display: grid; gap: .25rem; }
+  .faq dt { font-family: var(--display); font-size: 1.25rem; line-height: 1.3; }
+  .faq dd { margin: 0; color: var(--muted); max-width: 38rem; }
+
+  /* Book */
+  .panel {
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 20px;
+    padding: clamp(1.4rem, 5vw, 2.4rem) clamp(1.1rem, 5vw, 2.4rem);
+    display: grid; gap: 1.2rem;
+  }
+  .panel .btn { min-height: 3.4rem; font-size: 1.12rem; }
+  .code-row { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem; }
+  .code {
+    font-family: var(--display); font-size: 1.35rem; letter-spacing: .18em;
+    padding: .2rem .8rem; border: 1px dashed var(--gold); border-radius: 8px; color: var(--ink);
+  }
+  .copy {
+    font: inherit; font-size: .95rem; font-weight: 500;
+    padding: .45rem 1rem; border-radius: 999px; cursor: pointer;
+    background: transparent; color: var(--accent); border: 1px solid var(--accent);
+  }
+  .copy:hover { background: var(--bg); }
+  .status { font-size: .9rem; color: var(--muted); }
+  .note { font-size: .9rem; color: var(--muted); padding-top: 1rem; border-top: 1px solid var(--rule); }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--rule); }
+  footer .wrap { padding-block: 2rem 2.5rem; display: grid; gap: .4rem; font-size: .92rem; color: var(--muted); }
+  footer .partner { color: var(--ink); }
+
+  @media (max-width: 480px) {
+    .leaf { grid-template-columns: 2.3rem minmax(0, 1fr); gap: .75rem; padding: 1rem 2.2rem 1.05rem 2rem; }
+    .leaf::before { left: 9px; }
+    .leaf::after { right: 9px; }
+    .n b { font-size: 1.6rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn:hover { filter: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="wordmark" href="#welcome">Dhana's palm leaf corner</a>
+    <a class="top-link" href="#book">Book a reading</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="welcome">
+    <div class="wrap stack">
+      <p class="greet"><span lang="ta">வணக்கம்</span> Vanakkam, a Tamil welcome</p>
+      <h1>Is there a palm leaf waiting for you?</h1>
+      <p class="lede">I'm Dhanalakshmi, Dhana for short, from Thanjavur in Tamil Nadu. I help people around the world find their way to an online palm leaf reading with the Nadi libraries of South India, live over Zoom, from home.</p>
+      <a class="btn" href="https://mypalmleaf.com/prices/find-your-palm-leaf-and-read-the-general-chapter/?mpl=dhana" rel="noopener">Book your reading</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <p class="eyebrow">Thanjavur · Tamil Nadu</p>
+        <h2>About me</h2>
+      </div>
+      <div class="ornament" aria-hidden="true"><span></span></div>
+      <p>I was born and brought up in Thanjavur, in the heart of Tamil Nadu. A thousand years ago it was the capital of the great Chola kings. Their Brihadeeswarar Temple, the "Big Temple" built by Raja Raja Chola I, still rises over the town today. Thanjavur is also home to the Saraswathi Mahal Library, which keeps thousands of old palm leaf manuscripts. Growing up among these temples and old writings, I always felt close to the wisdom kept on palm leaves.</p>
+      <figure class="photo">
+        <img src="temple-thanjavur.jpg" width="960" height="640" alt="The tall stone tower of the Brihadeeswarar Temple in Thanjavur under a blue sky with white clouds, with the pillared Nandi pavilion in front and visitors walking across the courtyard.">
+        <figcaption>The Big Temple in Thanjavur, with the Nandi pavilion in front. Photo: Dhana</figcaption>
+      </figure>
+      <p>In 2015 I travelled to Vaitheeswaran Koil, a temple town in the same Kaveri delta known for its Nadi palm leaf libraries, and had my own reading there, in person. Sitting with the reader while he searched for my leaf is something I have never forgotten.</p>
+      <p>Today I also work with mypalmleaf as a translator, so I know the readings from the inside. mypalmleaf brings these readings online with live English translation, and I'm one of its partners. I'm sharing a tradition from my homeland so that people far from India can experience it too.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <p class="eyebrow">Six steps, from home</p>
+        <h2>How a reading works</h2>
+      </div>
+      <ol class="bundle">
+        <li class="leaf">
+          <div class="n" aria-hidden="true"><b>1</b><small lang="ta">௧</small></div>
+          <div><h3>Book online</h3><p>You book on mypalmleaf.com, at the same price as everyone else.</p></div>
+        </li>
+        <li class="leaf">
+          <div class="n" aria-hidden="true"><b>2</b><small lang="ta">௨</small></div>
+          <div><h3>Send your thumbprint</h3><p>An email shows you how to take it. It helps the library find your leaf.</p></div>
+        </li>
+        <li class="leaf">
+          <div class="n" aria-hidden="true"><b>3</b><small lang="ta">௩</small></div>
+          <div><h3>Choose your date</h3><p>Usually 1 to 3 weeks after your thumbprint arrives, you pick a time that suits you.</p></div>
+        </li>
+        <li class="leaf">
+          <div class="n" aria-hidden="true"><b>4</b><small lang="ta">௪</small></div>
+          <div><h3>The search for your leaf</h3><p>Live on Zoom, the reader asks you simple yes/no questions to find the leaf that matches you.</p></div>
+        </li>
+        <li class="leaf">
+          <div class="n" aria-hidden="true"><b>5</b><small lang="ta">௫</small></div>
+          <div><h3>Your reading</h3><p>The reader reads your leaf aloud in ancient Tamil, and a translator puts it into English for you, live.</p></div>
+        </li>
+        <li class="leaf">
+          <div class="n" aria-hidden="true"><b>6</b><small lang="ta">௬</small></div>
+          <div><h3>Yours to watch again</h3><p>Within about a week, the full video recording of your reading appears in your personal client area. Watch it as often as you like, and download it from a computer to keep. A photo of your own palm leaf follows within about two weeks.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="questions">
+    <div class="wrap stack">
+      <div class="sec-head">
+        <p class="eyebrow">Before you book</p>
+        <h2>Questions</h2>
+      </div>
+      <dl class="faq">
+        <div>
+          <dt>Does everyone have a leaf?</dt>
+          <dd>Not everyone. According to the tradition, people who feel a strong call to search often have one waiting.</dd>
+        </div>
+        <div>
+          <dt>What if my leaf isn't found?</dt>
+          <dd>Up to three attempts are included. If your leaf still isn't found, you get the reading price back, or you can choose to try again.</dd>
+        </div>
+        <div>
+          <dt>Do I have to travel to India?</dt>
+          <dd>No. The reading happens online over Zoom, wherever you live.</dd>
+        </div>
+        <div>
+          <dt>Does booking through this page cost more?</dt>
+          <dd>No. It's the same price as on mypalmleaf.com.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap">
+      <div class="panel">
+        <h2>Book your reading</h2>
+        <p>When you feel ready, you can book here. You'll go straight to the reading page on mypalmleaf.com, where you see the price and book.</p>
+        <a class="btn" href="https://mypalmleaf.com/prices/find-your-palm-leaf-and-read-the-general-chapter/?mpl=dhana" rel="noopener">Book your reading</a>
+        <p>Booking later or on another device? Enter this code at checkout. It gives no discount. It just lets mypalmleaf know you came through me.</p>
+        <div class="code-row">
+          <span class="code" id="code">DHANA</span>
+          <button class="copy" id="copy" type="button">Copy code</button>
+          <span class="status" id="status" aria-live="polite"></span>
+        </div>
+        <p class="note">Bookings through this page are for people living outside India, Germany, Austria and Switzerland.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="partner">I'm a mypalmleaf partner and earn from readings booked through my link.</p>
+    <p>Dhana's palm leaf corner · Thanjavur, Tamil Nadu</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById("copy");
+    var code = document.getElementById("code");
+    var status = document.getElementById("status");
+    function selectCode() {
+      var range = document.createRange();
+      range.selectNodeContents(code);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      status.textContent = "Selected. Copy it with your keyboard or long-press.";
+    }
+    btn.addEventListener("click", function () {
+      try {
+        navigator.clipboard.writeText("DHANA").then(function () {
+          status.textContent = "Copied";
+        }, selectCode);
+      } catch (e) {
+        selectCode();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
