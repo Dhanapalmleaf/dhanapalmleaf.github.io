@@ -163,8 +163,22 @@
     .leaf::after { right: 9px; }
     .n b { font-size: 1.6rem; }
   }
+  /* Floating booking button: one booking button is always in view while reading */
+  .float-book {
+    position: fixed; z-index: 20;
+    right: max(16px, env(safe-area-inset-right, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 6px 20px rgba(38, 35, 31, .25);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+  }
+  .float-book.is-hidden { opacity: 0; transform: translateY(12px); visibility: hidden; pointer-events: none; }
+  @media (max-width: 600px) {
+    .float-book { left: max(16px, env(safe-area-inset-left, 0px)); }
+    body { padding-bottom: 5.5rem; }
+  }
   @media (prefers-reduced-motion: reduce) {
     .btn:hover { filter: none; }
+    .float-book { transition: none; }
   }
 </style>
 </head>
@@ -291,6 +305,8 @@
   </div>
 </footer>
 
+<a class="btn float-book" id="float-book" href="https://mypalmleaf.com/prices/find-your-palm-leaf-and-read-the-general-chapter/?mpl=dhana" rel="noopener">Book your reading</a>
+
 <script>
   (function () {
     var btn = document.getElementById("copy");
@@ -313,6 +329,20 @@
         selectCode();
       }
     });
+  })();
+
+  // Hide the floating button while one of the page's own booking buttons is on screen.
+  (function () {
+    var floatBtn = document.getElementById("float-book");
+    if (!floatBtn || !("IntersectionObserver" in window)) return;
+    var onScreen = new Set();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) onScreen.add(e.target); else onScreen.delete(e.target);
+      });
+      floatBtn.classList.toggle("is-hidden", onScreen.size > 0);
+    });
+    document.querySelectorAll("main .btn").forEach(function (b) { io.observe(b); });
   })();
 </script>
 </body>
